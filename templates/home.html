@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fans Of Anime</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+<h1>Sons Of Anime</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Favourite Anime</th>
+    </tr>
+
+    {% for person in people %}
+    <tr>
+        <td>{{ person[0] }}</td>
+        <td>{{ person[1] }}</td>
+        <td>{{ person[2] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+
+<a href="/add">
+    <button>Add Yourself</button>
+</a>
+
+</body>
+</html>
